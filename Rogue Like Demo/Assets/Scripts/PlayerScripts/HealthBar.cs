@@ -5,30 +5,47 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {	private Animator anim;
+    [SerializeField]private GameObject HpBar;
     public Image bar;
     public float fill;
-    
+    public float HP;
+    public float selfDamage;
     void Start()
-    {	
-    	bar.fillAmount = fill;
-        fill = 1f;
-         for (int i = 4; i > 0; i--)
-        {
-        	fill -= 0.25f * Time.deltaTime;
-        }
+    {
+        selfDamage = 25f;
+    	bar.fillAmount = 1;
+        HP = bar.fillAmount * 100;
+        
     }
 	void Update()
     {
         
-       
-        if (fill == 0)
+        bar.fillAmount = HP / 100;
+
+        if (Input.GetKeyDown(KeyCode.H))
         {
-        	DieAnimation();
+            TakeSelfDamage();
+        }
+   
+    }
+
+    private void LateUpdate()
+    {
+        if (HP <= 0)
+        {
+            gameObject.SetActive(false);
+            HpBar.SetActive(false);
         }
     }
-    	void DieAnimation()
-     	{
-     		anim.SetInteger("State", 10);
-     		Debug.Log("You dead!");
-     	}
+
+    void TakeSelfDamage()
+    {
+        HP -= selfDamage; 
+    }
+
+    private void OnDisable()
+    {
+            Debug.Log("You died!");
+    }
+
 }
