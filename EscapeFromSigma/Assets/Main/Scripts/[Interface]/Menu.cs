@@ -6,6 +6,17 @@ public class Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    HealthBar HB;
+    Gun gn;
+    Animator playerAnimator;
+    GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+    private void Start()
+    {
+        player.GetComponent<HealthBar>();
+        player.GetComponent<Gun>();
+        player.GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -26,6 +37,9 @@ public class Menu : MonoBehaviour
         	pauseMenuUI.SetActive(false);
         	Time.timeScale = 1f;
         	GameIsPaused = false;
+            gn.enabled = true;
+            playerAnimator.enabled = true;
+            HB.enabled = true;
         }
 
        	void Pause ()
@@ -33,6 +47,9 @@ public class Menu : MonoBehaviour
         	pauseMenuUI.SetActive(true);
         	Time.timeScale = 0f;
         	GameIsPaused = true;
+            gn.enabled = false;
+            playerAnimator.enabled = false;
+            HB.enabled = false;
         }
     }
 }
