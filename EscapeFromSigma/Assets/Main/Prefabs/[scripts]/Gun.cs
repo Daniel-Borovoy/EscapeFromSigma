@@ -13,6 +13,9 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        /*Vector3 Difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotZ = Mathf.Atan2(Difference.y, Difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ - 90);*/
 
         if (TimeBtwShots <= 0)
         {
