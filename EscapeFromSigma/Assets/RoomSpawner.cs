@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
 {
+    SceneManagery sm;
     public Direction direction;
     public enum Direction
     {
@@ -20,10 +21,15 @@ public class RoomSpawner : MonoBehaviour
 
     private void Start()
     {
+        sm = GameObject.Find("Scene Manager").GetComponent<SceneManagery>();
+
         variants = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomVariants>();
         Destroy(gameObject, waitTime);
         Invoke("Spawn", 0.2f);
     }
+
+
+
     public void Spawn()
     {
         if(!spawned)
@@ -48,6 +54,7 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, variants.rightRooms.Length);
                 Instantiate(variants.rightRooms[rand], transform.position, variants.rightRooms[rand].transform.rotation);
             }
+            sm.PlusToCur();
             spawned = true;
         }
     }
@@ -58,4 +65,6 @@ public class RoomSpawner : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 }
