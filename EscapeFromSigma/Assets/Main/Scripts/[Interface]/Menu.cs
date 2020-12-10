@@ -8,9 +8,11 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenuUI;
     Gun gn;
     Animator playerAnimator;
+    GameObject HBar;
 
     private void Start()
     {
+        HBar = GameObject.Find("HealthBar");
         gn = GameObject.FindGameObjectWithTag("Player").GetComponent<Gun>();
         playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
@@ -36,6 +38,7 @@ public class Menu : MonoBehaviour
         	GameIsPaused = false;
             gn.enabled = true;
             playerAnimator.enabled = true;
+            HBar.SetActive(true);
         }
 
        	void Pause ()
@@ -45,6 +48,7 @@ public class Menu : MonoBehaviour
         	GameIsPaused = true;
             gn.enabled = false;
             playerAnimator.enabled = false;
+            HBar.SetActive(false);
         }
     }
 }
