@@ -55,7 +55,7 @@ public class HealthBar : MonoBehaviour
 
     }
     //Other functions
-    void TakeSelfDamage()
+    public void TakeSelfDamage()
     {
         currentHP -= selfDamage;
 
@@ -64,6 +64,10 @@ public class HealthBar : MonoBehaviour
         regen = StartCoroutine(Regen());
     }
 
+    public void Heal(float amountOfHeal)
+    {
+        currentHP += amountOfHeal;
+    }
     private void OnDisable() => Debug.Log("You dead");
 
     //Coroutines

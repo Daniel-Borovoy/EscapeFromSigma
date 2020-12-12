@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeRoom : MonoBehaviour
 {
-    //public Vector3 cameraChangePos;
+    public Vector3 cameraChangePos;
     public Vector3 playerChangePos;
     private Camera cam;
 
@@ -18,7 +18,7 @@ public class ChangeRoom : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.transform.position += playerChangePos;
-            //cam.transform.position += cameraChangePos;
+            cam.transform.position += cameraChangePos;
         }
     }
 }
