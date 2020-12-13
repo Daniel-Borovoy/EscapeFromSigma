@@ -2,7 +2,7 @@
 
 public class PlayerRotation : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
 
     private Vector2 currentDirection = new Vector3(0.0f, 1.0f, 0.0f);
     private Transform transformObject;

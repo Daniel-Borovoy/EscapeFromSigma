@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour
 {
     //Variables
     [Header("Health")]
-    [SerializeField] private GameObject HpBar;
+    public GameObject HpBar;
     private Animator anim;
     public Image bar;
     public float MaxHP;

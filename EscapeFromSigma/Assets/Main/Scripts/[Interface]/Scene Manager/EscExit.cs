@@ -7,7 +7,9 @@ public class EscExit : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             Application.Quit();
+        }
     }
 }

@@ -31,6 +31,16 @@ public class Menu : MonoBehaviour
         		Pause();
         	}
         }
+    }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        gn.enabled = true;
+        playerAnimator.enabled = true;
+        HBar.SetActive(true);
+    }
 
         void Resume ()
         {

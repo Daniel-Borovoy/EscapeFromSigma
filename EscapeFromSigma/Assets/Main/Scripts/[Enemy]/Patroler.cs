@@ -8,7 +8,7 @@ public class Patroler : MonoBehaviour
 
     public int positiononPatrol;
 
-    public Transform point;
+    Transform point;
 
     bool movingright;
 
@@ -21,6 +21,7 @@ public class Patroler : MonoBehaviour
     public float stoppingDistance;
     void Start()
     {
+        point = GameObject.FindGameObjectWithTag("Point").transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update()

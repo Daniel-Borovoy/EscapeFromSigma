@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - RoomPoint
   - Rooms
+  - Point
+  - Plita
   layers:
   - Default
   - TransparentFX

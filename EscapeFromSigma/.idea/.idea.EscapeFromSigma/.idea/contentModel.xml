@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Family\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Family\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_EscapeFromSigma.-463404630.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Family\Documents\GitHub\Rogalic_EscapefromSigma\EscapeFromSigma" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Main" t="Include">
+          <e p="Animation" t="Include">
+            <e p="Character3" t="Include">
+              <e p="PlayerAnim.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="[scripts]" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="Gun.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="[Enemy]" t="Include">
+              <e p="Enemy.cs" t="Include" />
+              <e p="Patroler.cs" t="Include" />
+            </e>
+            <e p="[Interface]" t="Include">
+              <e p="CameraFollow2D.cs" t="Include" />
+              <e p="CameraFolow.cs" t="Include" />
+              <e p="Menu.cs" t="Include" />
+              <e p="MenuControls.cs" t="Include" />
+              <e p="Scene Manager" t="Include">
+                <e p="EscExit.cs" t="Include" />
+                <e p="Exit.cs" t="Include" />
+                <e p="SceneManager.cs" t="Include" />
+              </e>
+              <e p="Settings.cs" t="Include" />
+            </e>
+            <e p="[Player]" t="Include">
+              <e p="CameraMovement.cs" t="Include" />
+              <e p="HealthBar.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+              <e p="PlayerRegeneration.cs" t="Include" />
+              <e p="PlayerRotation.cs" t="Include" />
+            </e>
+            <e p="PlayerScripts" t="Include">
+              <e p="AnimationPlayer.cs" t="Include" />
+              <e p="Move.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+            </e>
+            <e p="RandomSpawn.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="EscapeFromSigma.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
