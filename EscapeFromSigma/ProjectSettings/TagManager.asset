@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Block
+  - Wall
+  - RoomPoint
+  - Rooms
   - Point
+  - Plita
   layers:
   - Default
   - TransparentFX

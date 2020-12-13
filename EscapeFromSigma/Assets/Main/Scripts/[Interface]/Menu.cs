@@ -30,25 +30,24 @@ public class Menu : MonoBehaviour
         		Pause();
         	}
         }
+    }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        gn.enabled = true;
+        playerAnimator.enabled = true;
+        HBar.SetActive(true);
+    }
 
-        void Resume ()
-        {
-        	pauseMenuUI.SetActive(false);
-        	Time.timeScale = 1f;
-        	GameIsPaused = false;
-            gn.enabled = true;
-            playerAnimator.enabled = true;
-            HBar.SetActive(true);
-        }
-
-       	void Pause ()
-        {
-        	pauseMenuUI.SetActive(true);
-        	Time.timeScale = 0f;
-        	GameIsPaused = true;
-            gn.enabled = false;
-            playerAnimator.enabled = false;
-            HBar.SetActive(false);
-        }
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        gn.enabled = false;
+        playerAnimator.enabled = false;
+        HBar.SetActive(false);
     }
 }
