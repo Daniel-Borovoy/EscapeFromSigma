@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 720469584}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -686,8 +686,8 @@ Canvas:
   m_GameObject: {fileID: 720469583}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 70413289}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -696,7 +696,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &720469588
 RectTransform:
@@ -1234,8 +1234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.78, y: 32.77}
-  m_SizeDelta: {x: 362.7, y: 30}
+  m_AnchoredPosition: {x: 68.4, y: 35.872}
+  m_SizeDelta: {x: 277.2329, y: 41.74433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543041680
 MonoBehaviour:
@@ -1260,7 +1260,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -1269,9 +1269,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u044B \u0442\u043E\u0447\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435
+  m_Text: " \u0412\u044B \u0442\u043E\u0447\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435
     \u0432\u044B\u0439\u0442\u0438 \u0432 \u0433\u043B\u0430\u0432\u043D\u043E\u0435
-    \u043C\u0435\u043D\u044E?"
+    \u043C\u0435\u043D\u044E?\n          (\u0418\u0433\u0440\u0430 \u043D\u0435 \u0431\u0443\u0434\u0435\u0442
+    \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0430)"
 --- !u!222 &1543041681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1758,7 +1759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.3, y: 0}
+  m_AnchoredPosition: {x: -54.350006, y: -19.459991}
   m_SizeDelta: {x: 51.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1971065520
@@ -1815,8 +1816,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 720469584}
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
