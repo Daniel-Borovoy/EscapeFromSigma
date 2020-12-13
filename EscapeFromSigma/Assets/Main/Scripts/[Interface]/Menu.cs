@@ -9,13 +9,14 @@ public class Menu : MonoBehaviour
     HealthBar HB;
     Gun gn;
     Animator playerAnimator;
-    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    GameObject player;
 
     private void Start()
     {
-        player.GetComponent<HealthBar>();
-        player.GetComponent<Gun>();
-        player.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        HB = GetComponent<HealthBar>();
+        gn = GetComponent<Gun>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,15 +32,6 @@ public class Menu : MonoBehaviour
         		Pause();
         	}
         }
-    }
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-        gn.enabled = true;
-        playerAnimator.enabled = true;
-        HBar.SetActive(true);
     }
 
         void Resume ()
@@ -62,4 +54,3 @@ public class Menu : MonoBehaviour
             HB.enabled = false;
         }
     }
-}

@@ -29,7 +29,7 @@ public class HealthBar : MonoBehaviour
         selfDamage = 10f;
         MaxHP = 100f;
     	bar.fillAmount = 1;
-        currentHP = bar.fillAmount * 100;
+        currentHP = bar.fillAmount * 100f;
     }
     
 	void Update()
