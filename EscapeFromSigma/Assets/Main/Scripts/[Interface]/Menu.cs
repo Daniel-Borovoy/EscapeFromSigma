@@ -9,14 +9,12 @@ public class Menu : MonoBehaviour
     HealthBar HB;
     Gun gn;
     Animator playerAnimator;
-    GameObject player;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        HB = GetComponent<HealthBar>();
-        gn = GetComponent<Gun>();
-        playerAnimator = GetComponent<Animator>();
+        HB = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        gn = GameObject.FindGameObjectWithTag("Player").GetComponent<Gun>();
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
@@ -34,23 +32,23 @@ public class Menu : MonoBehaviour
         }
     }
 
-        void Resume ()
+        public void Resume ()
         {
         	pauseMenuUI.SetActive(false);
         	Time.timeScale = 1f;
         	GameIsPaused = false;
             gn.enabled = true;
             playerAnimator.enabled = true;
-            HB.enabled = true;
+            //HB.enabled = true;
         }
 
-       	void Pause ()
+       	public void Pause ()
         {
         	pauseMenuUI.SetActive(true);
         	Time.timeScale = 0f;
         	GameIsPaused = true;
             gn.enabled = false;
             playerAnimator.enabled = false;
-            HB.enabled = false;
+            //HB.enabled = false;
         }
     }

@@ -2144,7 +2144,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 52856a44e1c2c2643b099acbb32b23f2, type: 3}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -4145,6 +4145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115ebaf134f87a348aa41eac8f2fec9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurNumOfRooms: 0
+  MaxRooms: 30
 --- !u!4 &1887748766
 Transform:
   m_ObjectHideFlags: 0
