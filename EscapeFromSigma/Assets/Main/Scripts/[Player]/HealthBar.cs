@@ -29,7 +29,7 @@ public class HealthBar : MonoBehaviour
         selfDamage = 10f;
         MaxHP = 100f;
     	bar.fillAmount = 1;
-        currentHP = bar.fillAmount * 100;
+        currentHP = bar.fillAmount * 100f;
     }
     
 	void Update()
@@ -55,7 +55,7 @@ public class HealthBar : MonoBehaviour
 
     }
     //Other functions
-    void TakeSelfDamage()
+    public void TakeSelfDamage()
     {
         currentHP -= selfDamage;
 
@@ -64,6 +64,10 @@ public class HealthBar : MonoBehaviour
         regen = StartCoroutine(Regen());
     }
 
+    public void Heal(float amountOfHeal)
+    {
+        currentHP += amountOfHeal;
+    }
     private void OnDisable() => Debug.Log("You dead");
 
     //Coroutines
