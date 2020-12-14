@@ -9,6 +9,11 @@ public class Bullet : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
+
+    private void Start()
+    {
+        StartCoroutine(LifetimeDestroy());
+    }
     void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
@@ -21,8 +26,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
         transform.Translate(Vector2.up * speed * Time.deltaTime);
-
-        StartCoroutine(LifetimeDestroy());
     }
 
     IEnumerator LifetimeDestroy ()
