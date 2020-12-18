@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4172661677581333638}
   - component: {fileID: 4172661677581333637}
   - component: {fileID: 4172661677581333643}
+  - component: {fileID: 675365318895950037}
   m_Layer: 8
   m_Name: Emeny3
   m_TagString: Enemy
@@ -122,3 +123,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6150937, y: 5.8650694}
   m_EdgeRadius: 0
+--- !u!114 &675365318895950037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4172661677581333642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491093e0253249247b959bca5a48b3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stoppingDistance: 20
+  shootingDistance: 5
+  intimDistance: 3
