@@ -11,6 +11,8 @@ TagManager:
   - Rooms
   - Point
   - Plita
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX

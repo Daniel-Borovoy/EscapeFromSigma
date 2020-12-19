@@ -5,8 +5,8 @@ using UnityEngine;
 public class AddRoom : MonoBehaviour
 {
     [Header("Walls")]
-    public GameObject[] walls;
-    public GameObject wallEffect;
+    public GameObject walls;
+    //public GameObject wallEffect;
     public GameObject[] door;
 
     [Header("Enemies")]
@@ -58,15 +58,16 @@ public class AddRoom : MonoBehaviour
     }
     public void DestroyWalls()
     {
-        foreach(GameObject wall in walls)
+        GetComponentInChildren<WallsController>().DisableWalls();
+        wallsDestroyed = true;
+        /*foreach(GameObject wall in walls)
         {
             if (wall != null && wall.transform.childCount != 0)
             {
                 //Instantiate(wallEffect, wall.transform.position, Quaternion.identity);
                 Destroy(wall);
             }
-        }
-        wallsDestroyed = true;
+        }*/
     }
     private void OnTriggerStay2D(Collider2D other)
     {
