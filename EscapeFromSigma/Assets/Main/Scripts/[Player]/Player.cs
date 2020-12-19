@@ -7,12 +7,11 @@ public class Player : MonoBehaviour
     //Variables
     [Header("Key")]
     public GameObject keyIcon;
-    //public GameObject wallEffect;
+    /*public GameObject wallEffect;*/
     private bool keyBottonPushed;
 
 
     [Header("Moving")]
-    [SerializeField] private GameObject obj;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rb;
     private Vector2 moveVelocity;
@@ -22,10 +21,20 @@ public class Player : MonoBehaviour
     [SerializeField] private float RotationSpeed;
     private Vector2 currentDirection = new Vector3(0.0f, 1.0f, 0.0f);
     private Transform transformObject;
+    //Angle
+    private float Angle;
+    private float sign;
+
 
     [HideInInspector][Header("Animation")]
     private Animator anim;
 
+
+    [Header("Shooting")]
+    [SerializeField] private Transform shotPoint;
+    [SerializeField] private GameObject Bullet;
+    [SerializeField] private float StartTimeBtwShots;
+    private float TimeBtwShots;
 
     //Methods and functions
 
@@ -52,17 +61,31 @@ public class Player : MonoBehaviour
         //Rotation
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 objectPos = transformObject.position;
-
         Vector2 direction = mousePos - objectPos;
         direction.Normalize();
-
         currentDirection = Vector2.Lerp(currentDirection, direction, Time.deltaTime * RotationSpeed);
         transformObject.up = currentDirection;
 
+        //Angle. 0<a<90 = RightUp, 90<a<180 = LeftUp, -180<a<-90 = LeftDown, -90<a<0 = RightDown
+        //sign = (direction.y >= objectPos.y) ? 1 : -1;
+        //Angle = Vector2.Angle(Vector2.right, direction) * sign;
 
         //Moving
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * moveSpeed;
+
+
+        //Shooting
+        if (TimeBtwShots <= 0)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                Instantiate(Bullet, shotPoint.position, transform.rotation);
+                TimeBtwShots = StartTimeBtwShots;
+            }
+        }
+        else
+            TimeBtwShots -= Time.deltaTime;
     }
 
     private void FixedUpdate()
