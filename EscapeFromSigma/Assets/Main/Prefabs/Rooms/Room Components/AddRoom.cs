@@ -6,6 +6,7 @@ public class AddRoom : MonoBehaviour
 {
     [Header("Walls")]
     public GameObject walls;
+
     //public GameObject wallEffect;
     public GameObject[] door;
 
@@ -47,16 +48,17 @@ public class AddRoom : MonoBehaviour
                     Instantiate(others[Random.Range(0, others.Length)], spawner.position, Quaternion.identity);
                 }
             }
-            StartCoroutine(CheckEnemies());
+            StartCoroutine(CheckEnemiesAndDestroyWalls());
         }
     }
-    IEnumerator CheckEnemies()
+    IEnumerator CheckEnemiesAndDestroyWalls()
     {
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => enemies.Count == 0);
-        DestroyWalls();
+        Destroy(walls);
+        wallsDestroyed = true;
     }
-    public void DestroyWalls()
+    /*public void DestroyWalls()
     {
         GetComponentInChildren<WallsController>().DisableWalls();
         wallsDestroyed = true;
@@ -69,6 +71,7 @@ public class AddRoom : MonoBehaviour
             }
         }*/
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (wallsDestroyed && other.CompareTag("Wall"))
