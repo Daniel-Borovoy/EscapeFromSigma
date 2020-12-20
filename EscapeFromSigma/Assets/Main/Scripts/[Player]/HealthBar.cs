@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     private Animator anim;
     public Image bar;
     public float MaxHP;
-    public float currentHP;
+    [SerializeField] public float currentHP;
     public float selfDamage;
 
     [Header("Regeneration")]
@@ -82,4 +82,5 @@ public class HealthBar : MonoBehaviour
         }
         regen = null;
     }
+
 }

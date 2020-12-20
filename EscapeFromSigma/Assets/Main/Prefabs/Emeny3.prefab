@@ -136,6 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  stoppingDistance: 20
-  shootingDistance: 5
-  intimDistance: 3
+  aggrZone: 10
+  distance: 4

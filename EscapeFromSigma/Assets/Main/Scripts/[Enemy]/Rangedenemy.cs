@@ -2,49 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rangedenemy : MonoBehaviour
+public class RangedEnemy : MonoBehaviour
 {
-    public float speed = 5f;
-    bool attack = false;
-    public float stoppingDistance;
+    public float speed;
+    bool gotoPlayer = false;
+    public float aggrZone;
+    public float distance;
     Transform player;
-    public float shootingDistance;
-    public float intimDistance;
-
+    float Dist;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) < stoppingDistance)
+        Dist = Vector2.Distance(transform.position, player.position);
+        if (Dist <= aggrZone && Dist >= distance)
         {
-            attack = true;
+            gotoPlayer = true;
         }
-        if (Vector2.Distance(transform.position, player.position) < shootingDistance)
+        else
         {
-            Stay();
+            gotoPlayer = false;
         }
-        else if (attack == true)
+        if (gotoPlayer == true)
         {
-            Attack();
-        }
-
-    }
-    private void Attack()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-    }
-    private void Stay()
-    {
-        if (Vector2.Distance(transform.position, player.position) < intimDistance)
-        {
-            GoAway();
+            GoToPlayer();
         }
     }
-    private void GoAway()
+    private void GoToPlayer()
     {
-
+        if (Vector2.Distance(transform.position, player.position) <= aggrZone)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
     }
 }

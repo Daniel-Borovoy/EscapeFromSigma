@@ -2,35 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meleeenemy : MonoBehaviour
+public class MeleeEnemy : MonoBehaviour
 {
     public float speed;
-    bool attack = false;
-    public float stoppingDistance;
+    bool gotoPlayer = false;
+    public float aggrZone;
+    private float distance = 1.2f;
     Transform player;
-
+    float Dist;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) < stoppingDistance)
+        Dist = Vector2.Distance(transform.position, player.position);
+        if (Dist <= aggrZone && Dist >= distance)
         {
-            attack = true;
+            gotoPlayer = true;
         }
         else
         {
-            Debug.Log("");
+            gotoPlayer = false;
         }
-        if (attack==true)
+        if (gotoPlayer == true)
         {
-            Attack();
+            GoToPlayer();
         }
     }
-    private void Attack()
+    private void GoToPlayer()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, player.position) <= aggrZone)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }      
     }
 }
