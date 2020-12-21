@@ -12,26 +12,20 @@ public class Move : MonoBehaviour
 
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     void Update()
     {
-
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * moveSpeed;
-
     }
 
 
     private void FixedUpdate()
     {
-
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-        Physics2D.gravity = new Vector3(0, 0, -9.8f);
-        
+        Physics2D.gravity = new Vector3(0, 0, -9.8f);      
     }
 
 }

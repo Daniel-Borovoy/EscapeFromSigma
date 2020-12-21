@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float RangedStoppingDistance; //Minimal distance between player and ranged enemy
     private float DBPaE; //Distance Between Player and Enemy
     Transform player;
+    public GameObject effect;
 
 
     //Awake, Start
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         //Something about enemy health
         if (health <= 0)
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
             room.enemies.Remove(gameObject);
         }

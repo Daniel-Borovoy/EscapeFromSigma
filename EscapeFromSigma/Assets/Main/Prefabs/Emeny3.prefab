@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
 --- !u!61 &4172661677581333643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,11 +163,10 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4172661677581333642}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 20
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491093e0253249247b959bca5a48b3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  aggrZone: 10
+  distance: 4
