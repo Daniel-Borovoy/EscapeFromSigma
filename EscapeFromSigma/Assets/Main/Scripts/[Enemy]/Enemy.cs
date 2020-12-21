@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public bool isAnimated;
     private Animator anim;
     [HideInInspector] public bool PlayerNotInRoom;
+    public GameObject effect;
 
 
     //Awake, Start
@@ -39,6 +40,7 @@ public class Enemy : MonoBehaviour
         //Something about enemy health
         if (health <= 0)
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
             room.enemies.Remove(gameObject);
         }

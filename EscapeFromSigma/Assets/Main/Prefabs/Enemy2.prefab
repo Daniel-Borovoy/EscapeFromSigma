@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2211369679647701974}
   - component: {fileID: 5454987877670503565}
   - component: {fileID: 2325173948415866148}
+  - component: {fileID: 4240087213463298822}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: Enemy
@@ -127,3 +128,4 @@ MonoBehaviour:
   AggressiveZone: 10
   MeleeStoppingDistance: 1.2
   RangedStoppingDistance: 5
+  effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
