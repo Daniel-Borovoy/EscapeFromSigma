@@ -70,7 +70,6 @@ public class AddRoom : MonoBehaviour
                 Destroy(wall);
             }
         }*/
-    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
