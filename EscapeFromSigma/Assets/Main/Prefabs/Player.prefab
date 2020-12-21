@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5e39d27b8403343b71dc47b42af201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyIcon: {fileID: 0}
+  keyIcon: {fileID: 1171643806791837956, guid: fe87c3dc2400bfa40a53edc53076ca7a, type: 3}
   moveSpeed: 5
   rb: {fileID: 0}
   RotationSpeed: 0
