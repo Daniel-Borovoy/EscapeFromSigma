@@ -90,6 +90,7 @@ public class AddRoom : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => enemies.Count == 0);
         Destroy(walls);
+        Instantiate(wallEffect, walls.transform.position, Quaternion.identity);
         wallsDestroyed = true;
     }
     

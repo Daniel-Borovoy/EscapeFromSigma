@@ -8,6 +8,7 @@ public class RoomVariants : MonoBehaviour
     public GameObject[] bottomRooms;
     public GameObject[] rightRooms;
     public GameObject[] leftRooms;
+    public bool FinishedGenerating;
 
     public GameObject Key;
     //public GameObject Gun;
@@ -16,6 +17,7 @@ public class RoomVariants : MonoBehaviour
 
     private void Start()
     {
+        FinishedGenerating = false;
         StartCoroutine(RandomSpawner());
     }
 
@@ -29,6 +31,7 @@ public class RoomVariants : MonoBehaviour
 
         lastRoom.door.SetActive(true);
         lastRoom.walls.SetActive(false);//GetComponent<WallsController>().DisableWalls();
-       
+
+        FinishedGenerating = true;
     }
 }
