@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     public float distance;
     public int damage;
-    public LayerMask whatIsSolid;
+    public LayerMask isSolid;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     }
     void Update()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, isSolid);
         if (hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("Enemy"))

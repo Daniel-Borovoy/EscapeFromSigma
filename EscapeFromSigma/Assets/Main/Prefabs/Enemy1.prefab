@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7910821239896554896}
   - component: {fileID: 8832620675246820348}
   - component: {fileID: 6713081355675061092}
-  - component: {fileID: 4546287577569856426}
   - component: {fileID: 5541031450543645549}
   m_Layer: 8
   m_Name: Enemy1
@@ -110,20 +109,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7241707, y: 5.4550714}
   m_EdgeRadius: 0
---- !u!114 &4546287577569856426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792399362046125070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ed2cd6ee205fe42a597b46e07c1596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  aggrZone: 10
 --- !u!114 &5541031450543645549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  MovingSpeed: 3
+  isRangedEnemy: 0
+  AggressiveZone: 10
+  MeleeStoppingDistance: 1.2
+  RangedStoppingDistance: 5
