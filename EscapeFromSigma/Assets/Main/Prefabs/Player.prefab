@@ -92,10 +92,8 @@ GameObject:
   - component: {fileID: 2642481561762335067}
   - component: {fileID: 2642481561762335066}
   - component: {fileID: 2642481561762335069}
+  - component: {fileID: 8643235564866855160}
   - component: {fileID: 2642481561762335065}
-  - component: {fileID: 2642481561762335062}
-  - component: {fileID: 2642481561762335063}
-  - component: {fileID: 2642481561762335059}
   - component: {fileID: 2642481561762335060}
   - component: {fileID: 2642481561762335061}
   - component: {fileID: 2642481561762335056}
@@ -191,6 +189,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8643235564866855160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642481561762335068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5e39d27b8403343b71dc47b42af201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyIcon: {fileID: 0}
+  moveSpeed: 5
+  rb: {fileID: 0}
+  RotationSpeed: 10
+  shotPoint: {fileID: 2642481560362857962}
+  Bullet: {fileID: 6088960709506836254, guid: 5bcdc45e0d3d64c4da12b197b5efff8f, type: 3}
+  StartTimeBtwShots: 0.3
 --- !u!50 &2642481561762335065
 Rigidbody2D:
   serializedVersion: 4
@@ -212,46 +229,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2642481561762335062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2642481561762335068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3dd183bf1181d94c99188e418ffc2bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2642481561762335063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2642481561762335068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65b24dc60c51bf4c85943c22b367d89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &2642481561762335059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2642481561762335068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62b5d3cca35fee43923efdc4e6e1dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  moveSpeed: 5
-  rb: {fileID: 0}
 --- !u!114 &2642481561762335060
 MonoBehaviour:
   m_ObjectHideFlags: 0
