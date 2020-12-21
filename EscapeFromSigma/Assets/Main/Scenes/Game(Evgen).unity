@@ -1123,6 +1123,18 @@ PrefabInstance:
       propertyPath: bottomRooms.Array.data[7]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1828944335618329668, guid: 6faeb0dc3892a2a459ca4f17948aea96,
+        type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 351225625465085753, guid: f6dffdc1ca32c1d439a228636a0de2e7,
+        type: 3}
+    - target: {fileID: 1828944335618329668, guid: 6faeb0dc3892a2a459ca4f17948aea96,
+        type: 3}
+      propertyPath: Key
+      value: 
+      objectReference: {fileID: 351225625465085753, guid: f6dffdc1ca32c1d439a228636a0de2e7,
+        type: 3}
     - target: {fileID: 1828944335618329669, guid: 6faeb0dc3892a2a459ca4f17948aea96,
         type: 3}
       propertyPath: m_Name

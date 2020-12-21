@@ -256,6 +256,7 @@ MonoBehaviour:
   RangedStoppingDistance: 5
   isAnimated: 1
   PlayerNotInRoom: 0
+  effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
 --- !u!70 &6797152196031148461
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
