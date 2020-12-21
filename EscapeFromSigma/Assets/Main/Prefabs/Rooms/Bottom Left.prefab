@@ -80,7 +80,6 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 1792399362046125070, guid: 61edc52fa4a03e040bbe778e3122f051, type: 3}
   - {fileID: 4022798705066331436, guid: effab1a87a6660a4cb7f3dad82f0700b, type: 3}
-  - {fileID: 4172661677581333642, guid: 4c17b2654446b364d8e72b3a0dc65124, type: 3}
   enemySpawners:
   - {fileID: 5029098450124067286}
   - {fileID: 3857547668890812209}
@@ -98,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2775546395162368139}
+  - component: {fileID: 3621694172072360861}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -121,6 +121,18 @@ Transform:
   m_Father: {fileID: 2775546394824949517}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3621694172072360861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2775546395162368138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569ee4d8cab7f1542bf129c2b13580be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2775546395363246544
 GameObject:
   m_ObjectHideFlags: 0
