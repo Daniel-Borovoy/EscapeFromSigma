@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     private AddRoom room;
+    public GameObject effect;
 
     private void Start()
     {
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
             room.enemies.Remove(gameObject);
         }

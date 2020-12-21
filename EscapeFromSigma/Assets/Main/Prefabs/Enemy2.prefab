@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2211369679647701974}
   - component: {fileID: 5454987877670503565}
   - component: {fileID: 2325173948415866148}
-  - component: {fileID: 5945556442954857358}
+  - component: {fileID: 4240087213463298822}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: Enemy
@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
---- !u!114 &5945556442954857358
+  effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
+--- !u!114 &4240087213463298822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
