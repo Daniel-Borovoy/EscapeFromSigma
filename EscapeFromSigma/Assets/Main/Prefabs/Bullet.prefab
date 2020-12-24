@@ -98,6 +98,6 @@ MonoBehaviour:
   lifetime: 0.2
   distance: 0.1
   damage: 1
-  whatIsSolid:
+  isSolid:
     serializedVersion: 2
     m_Bits: 256

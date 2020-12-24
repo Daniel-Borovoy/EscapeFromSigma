@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7910821239896554896}
   - component: {fileID: 8832620675246820348}
-  - component: {fileID: 6713081355675061092}
   - component: {fileID: 5541031450543645549}
+  - component: {fileID: 1883928142461109165}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -83,46 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6713081355675061092
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792399362046125070}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018202305, y: 0.010112524}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.45, y: 4.1}
-    newSize: {x: 2.45, y: 4.1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.7241707, y: 5.4550714}
-  m_EdgeRadius: 0
---- !u!114 &4546287577569856426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792399362046125070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ed2cd6ee205fe42a597b46e07c1596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  aggrZone: 10
 --- !u!114 &5541031450543645549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,10 +95,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0b6324eab4cc4bbdf22d3f474256e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  MovingSpeed: 0
+  health: 10
+  MovingSpeed: 3
   isRangedEnemy: 0
-  AggressiveZone: 0
-  MeleeStoppingDistance: 0
-  RangedStoppingDistance: 0
+  AggressiveZone: 10
+  MeleeStoppingDistance: 1.2
+  RangedStoppingDistance: 5
+  isAnimated: 0
+  PlayerNotInRoom: 0
   effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
+--- !u!70 &1883928142461109165
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792399362046125070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010990262, y: -0.25643706}
+  m_Size: {x: 1.7748575, y: 3.6376371}
+  m_Direction: 0

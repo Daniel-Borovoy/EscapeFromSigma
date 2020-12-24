@@ -75,11 +75,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walls: {fileID: 2775546395162368138}
-  door: []
+  wallEffect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d,
+    type: 3}
+  door: {fileID: 0}
   enemyTypes:
   - {fileID: 1792399362046125070, guid: 61edc52fa4a03e040bbe778e3122f051, type: 3}
   - {fileID: 4022798705066331436, guid: effab1a87a6660a4cb7f3dad82f0700b, type: 3}
-  - {fileID: 4172661677581333642, guid: 4c17b2654446b364d8e72b3a0dc65124, type: 3}
   enemySpawners:
   - {fileID: 8852965545899175306}
   - {fileID: 765115016525644653}

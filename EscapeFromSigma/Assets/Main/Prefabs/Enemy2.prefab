@@ -123,18 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  MovingSpeed: 3
+  isRangedEnemy: 0
+  AggressiveZone: 10
+  MeleeStoppingDistance: 1.2
+  RangedStoppingDistance: 5
   effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}
---- !u!114 &4240087213463298822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4022798705066331436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ed2cd6ee205fe42a597b46e07c1596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  aggrZone: 10

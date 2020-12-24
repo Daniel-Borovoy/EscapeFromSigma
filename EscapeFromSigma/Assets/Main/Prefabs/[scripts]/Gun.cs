@@ -6,8 +6,10 @@ public class Gun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shotPoint;
-    public float StartTimeBtwShots;
+    
     private float TimeBtwShots;
+    public float StartTimeBtwShots;
+
 
     void Update()
     {
@@ -20,6 +22,8 @@ public class Gun : MonoBehaviour
             }
         }
         else
+        {
             TimeBtwShots -= Time.deltaTime;
+        }
     }
 }

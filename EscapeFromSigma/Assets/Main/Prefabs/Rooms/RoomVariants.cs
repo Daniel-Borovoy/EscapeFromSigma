@@ -8,4 +8,30 @@ public class RoomVariants : MonoBehaviour
     public GameObject[] bottomRooms;
     public GameObject[] rightRooms;
     public GameObject[] leftRooms;
+    public bool FinishedGenerating;
+
+    public GameObject Key;
+    //public GameObject Gun;
+
+    [HideInInspector] public List<GameObject> rooms;
+
+    private void Start()
+    {
+        FinishedGenerating = false;
+        StartCoroutine(RandomSpawner());
+    }
+
+    IEnumerator RandomSpawner()
+    {
+        yield return new WaitForSeconds(5f);
+        AddRoom lastRoom = rooms[rooms.Count - 1].GetComponent<AddRoom>();
+
+        Instantiate(Key, rooms[Random.Range(0, rooms.Count - 2)].transform.position, Quaternion.identity);
+        //Instantiate(Gun, rooms[rooms.Count - 2].transform.position, Quaternion.identity);
+
+        lastRoom.door.SetActive(true);
+        lastRoom.walls.SetActive(false);//GetComponent<WallsController>().DisableWalls();
+
+        FinishedGenerating = true;
+    }
 }

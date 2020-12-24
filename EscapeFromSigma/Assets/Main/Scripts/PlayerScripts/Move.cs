@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using UnityEngine;
 
 public class Move : MonoBehaviour
 {
@@ -14,6 +18,10 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+
+
+
 
     void Update()
     {
