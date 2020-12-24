@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: db4367b3d41bdbb418fa7bdeea71e49e
+guid: 7891abfb203b30e4d9e14e0efa200f8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4272486808631307110
-    second: SoldiersFront_0
+      213: 7165642504068371544
+    second: IMG_9547_0
   - first:
-      213: -8490299359109228666
-    second: SoldiersFront_1
+      213: -7175843093079448914
+    second: IMG_9547_1
   - first:
-      213: 7481071222284628125
-    second: SoldiersFront_2
+      213: -8120113669522936309
+    second: IMG_9547_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,14 +66,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,75 +85,75 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SoldiersFront_0
+      name: IMG_9547_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 21
-        width: 33
-        height: 36
+        x: 112
+        y: 72
+        width: 408
+        height: 792
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66be208ad1cea4b30800000000000000
-      internalID: 4272486808631307110
+      spriteID: 8549f6a64e9717360800000000000000
+      internalID: 7165642504068371544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoldiersFront_1
+      name: IMG_9547_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 21
-        width: 32
-        height: 36
+        x: 752
+        y: 96
+        width: 264
+        height: 768
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 687519767b56c2a80800000000000000
-      internalID: -8490299359109228666
+      spriteID: ea22f01e9b84a6c90800000000000000
+      internalID: -7175843093079448914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoldiersFront_2
+      name: IMG_9547_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 21
-        width: 34
-        height: 36
-      alignment: 9
-      pivot: {x: 0.5225747, y: 0.116228156}
+        x: 1280
+        y: 72
+        width: 392
+        height: 776
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d903ca7e3aa12d760800000000000000
-      internalID: 7481071222284628125
+      spriteID: b0eaa48c3af8f4f80800000000000000
+      internalID: -8120113669522936309
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8327ab45c4ef32c40b2a777a5101d396
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

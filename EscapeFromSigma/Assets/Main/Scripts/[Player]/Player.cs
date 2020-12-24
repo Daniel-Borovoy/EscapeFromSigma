@@ -59,12 +59,12 @@ public class Player : MonoBehaviour
 
 
         //Rotation
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        /*Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 objectPos = transformObject.position;
         Vector2 direction = mousePos - objectPos;
         direction.Normalize();
         currentDirection = Vector2.Lerp(currentDirection, direction, Time.deltaTime * RotationSpeed);
-        transformObject.up = currentDirection;
+        transformObject.up = currentDirection;*/
 
         //Angle. 0<a<90 = RightUp, 90<a<180 = LeftUp, -180<a<-90 = LeftDown, -90<a<0 = RightDown
         //sign = (direction.y >= objectPos.y) ? 1 : -1;
