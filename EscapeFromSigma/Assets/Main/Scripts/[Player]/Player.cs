@@ -18,9 +18,8 @@ public class Player : MonoBehaviour
 
 
     [Header("Rotation")]
-    [SerializeField] private float RotationSpeed;
-    private Vector2 currentDirection = new Vector3(0.0f, 1.0f, 0.0f);
-    private Transform transformObject;
+    Transform transformObject;
+    bool FacingRight = true;
     //Angle
     private float Angle;
     private float sign;
@@ -29,24 +28,17 @@ public class Player : MonoBehaviour
     [HideInInspector][Header("Animation")]
     private Animator anim;
 
-
-    [Header("Shooting")]
-    [SerializeField] private Transform shotPoint;
-    [SerializeField] private GameObject Bullet;
-    [SerializeField] private float StartTimeBtwShots;
-    private float TimeBtwShots;
-
     //Methods and functions
-
+    //Awake, Start and Updates
     private void Start()
     {
-        anim = GetComponent<Animator>();
-        transformObject = this.transform;
+        //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        transformObject = this.transform;
     }
     private void Update()
     {
-        //Animations
+        /*//Animations
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
             anim.SetBool("isWalking", true);
         else
@@ -55,37 +47,22 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
             anim.SetBool("isShooting", true);
         else
-            anim.SetBool("isShooting", false);
+            anim.SetBool("isShooting", false);*/
 
-
-        //Rotation
+        //Rotatoin
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 objectPos = transformObject.position;
         Vector2 direction = mousePos - objectPos;
-        direction.Normalize();
-        currentDirection = Vector2.Lerp(currentDirection, direction, Time.deltaTime * RotationSpeed);
-        transformObject.up = currentDirection;
 
         //Angle. 0<a<90 = RightUp, 90<a<180 = LeftUp, -180<a<-90 = LeftDown, -90<a<0 = RightDown
-        //sign = (direction.y >= objectPos.y) ? 1 : -1;
-        //Angle = Vector2.Angle(Vector2.right, direction) * sign;
+        sign = (direction.y >= objectPos.y) ? 1 : -1;
+        Angle = Vector2.Angle(Vector2.right, direction) * sign;
+
+        
 
         //Moving
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * moveSpeed;
-
-
-        //Shooting
-        if (TimeBtwShots <= 0)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Instantiate(Bullet, shotPoint.position, transform.rotation);
-                TimeBtwShots = StartTimeBtwShots;
-            }
-        }
-        else
-            TimeBtwShots -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -93,7 +70,15 @@ public class Player : MonoBehaviour
         //Moving
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
         Physics2D.gravity = new Vector3(0, 0, -9.8f);
+
+        //Rotation
+        if (FacingRight != true && (Angle < 90 && Angle > -90))
+            Flip();
+        else if (FacingRight == true && (Angle < -180 && Angle < -90) && (Angle < 180 && Angle > 90))
+            Flip();
     }
+
+    //Other methods
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -118,5 +103,13 @@ public class Player : MonoBehaviour
             collision.gameObject.SetActive(false);
             keyBottonPushed = false;
         }
+    }
+
+    public void Flip()
+    {
+        FacingRight = !FacingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }

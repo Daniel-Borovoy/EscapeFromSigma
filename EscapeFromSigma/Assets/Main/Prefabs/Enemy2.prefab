@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2211369679647701974}
   - component: {fileID: 5454987877670503565}
   - component: {fileID: 2325173948415866148}
-  - component: {fileID: 4240087213463298822}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: Enemy
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4022798705066331436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.15, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 10.24, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -128,4 +127,6 @@ MonoBehaviour:
   AggressiveZone: 10
   MeleeStoppingDistance: 1.2
   RangedStoppingDistance: 5
+  isAnimated: 0
+  PlayerNotInRoom: 0
   effect: {fileID: 8838894348306778191, guid: 060d4d2b57fac594290d3a4dae27fb8d, type: 3}

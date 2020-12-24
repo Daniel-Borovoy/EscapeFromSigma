@@ -10,6 +10,16 @@ public class Gun : MonoBehaviour
     private float TimeBtwShots;
     public float StartTimeBtwShots;
 
+    [Header("Rotation")]
+    [SerializeField] private float RotationSpeed;
+    private Vector2 currentDirection = new Vector3(0.0f, 1.0f, 0.0f);
+    private Transform transformObject;
+
+    private void Start()
+    {
+        transformObject = this.transform;
+    }
+
 
     void Update()
     {
@@ -25,5 +35,14 @@ public class Gun : MonoBehaviour
         {
             TimeBtwShots -= Time.deltaTime;
         }
+
+
+        //Rotation
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 objectPos = transformObject.position;
+        Vector2 direction = mousePos - objectPos;
+        direction.Normalize();
+        currentDirection = Vector2.Lerp(currentDirection, direction, Time.deltaTime * RotationSpeed);
+        transformObject.up = currentDirection;
     }
 }
