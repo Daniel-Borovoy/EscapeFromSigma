@@ -1,1 +1,1 @@
-# Rogalic_EscapefromSigma
+# EscapefromSigma - roguelike game
